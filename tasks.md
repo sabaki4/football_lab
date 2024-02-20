@@ -41,7 +41,8 @@ SELECT COUNT(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freibur
 5)  Find the teams which include the word "City" in their name. HINT: Not every team has been entered into the database with their full name, eg. `Norwich City` are listed as `Norwich`. If your query is correct it should return four teams.
 
 ```sql
-<!-- Copy solution here -->
+SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
+Man City, Bath City, Edinburgh City, Bristol city
 
 
 ```
