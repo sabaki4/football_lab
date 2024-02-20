@@ -30,7 +30,10 @@ Scottish Premiership, Scottish Championship, Scottish League One
 4) Find the value of the `code` for the `Bundesliga` division. Use that code to find out how many matches Freiburg have played in that division. HINT: You will need to query both tables
 
 ```sql
-<!-- Copy solution here -->
+SELECT * FROM divisions WHERE name = 'Bundesliga';
+Code: D1
+SELECT COUNT(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg');
+# Matches: 374
 
 
 ```
