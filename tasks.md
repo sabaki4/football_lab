@@ -22,7 +22,7 @@ SELECT * FROM matches WHERE hometeam = 'Barcelona' OR awayteam = 'Barcelona';
 
 ```sql
 SELECT * FROM divisions WHERE country = 'Scotland';
-Scottish Premiership, Scottish Championship, Scottish League One
+--Scottish Premiership, Scottish Championship, Scottish League One
 
 
 ```
@@ -33,7 +33,7 @@ Scottish Premiership, Scottish Championship, Scottish League One
 SELECT * FROM divisions WHERE name = 'Bundesliga';
 Code: D1
 SELECT COUNT(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg');
-# Matches: 374
+--# Matches: 374
 
 
 ```
@@ -42,7 +42,7 @@ SELECT COUNT(*) FROM matches WHERE division_code = 'D1' AND (hometeam = 'Freibur
 
 ```sql
 SELECT DISTINCT hometeam FROM matches WHERE hometeam LIKE '%City%';
-Man City, Bath City, Edinburgh City, Bristol city
+--Man City, Bath City, Edinburgh City, Bristol city
 
 
 ```
@@ -60,7 +60,8 @@ SELECT COUNT (DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR divi
 7) Have Huddersfield played Swansea in any of the recorded matches?
 
 ```sql
-<!-- Copy solution here -->
+-- Yes:12x
+SELECT * FROM matches WHERE (hometeam = 'Swansea' AND awayteam = 'Huddersfield') OR (hometeam = 'Huddersfield' AND awayteam = 'Swansea');
 
 
 ```
